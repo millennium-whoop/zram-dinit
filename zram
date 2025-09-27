@@ -1,0 +1,7 @@
+type         = scripted
+command      = /usr/bin/init-zram.sh
+stop-command = /usr/bin/stop-zram.sh
+env-file     = /etc/dinit.d/config/zram.conf
+logfile      = /var/log/dinit/zram.log
+depends-on   = early-devices.target
+after        = early-fs-local.target

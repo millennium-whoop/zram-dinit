@@ -1,0 +1,1 @@
+/home/voltorb/Programs/zram-dinit/stop-zram.sh
