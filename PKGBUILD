@@ -7,8 +7,9 @@ arch=('any')
 license=('MIT')
 depends=('dinit' 'util-linux')
 backup=('etc/dinit.d/config/zram.conf')
-source=('zram' 'init-zram.sh' 'stop-zram.sh' 'zram.conf')
-md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')  # Or use `updpkgsums`
+source=("https://github.com/millennium-whoop/zram-dinit/releases/download/v${pkgver}/zram-dinit-${pkgver}.tar.gz")
+md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
+sha256sums=('fcf923a63434e5571f7a98f500ecc37dc18f12f3a743132f7961210de6997703  zram-dinit-1.0-1-any.pkg.tar')
 
 package() {
   install -Dm755 "$srcdir/init-zram.sh" "$pkgdir/usr/bin/init-zram.sh"
