@@ -1,13 +1,12 @@
 pkgbase = zram-dinit
-	pkgdesc = Dinit service for setting up zram swap without zramen
-	pkgver = 1.0
+	pkgdesc = Dinit service for setting up zram swap
+	pkgver = 1.1
 	pkgrel = 1
 	arch = any
 	license = MIT
 	depends = dinit
-	depends = util-linux
 	backup = etc/dinit.d/config/zram.conf
-	source = https://github.com/millennium-whoop/zram-dinit/releases/download/v1.0/zram-dinit-1.0.tar.gz
+	source = https://github.com/millennium-whoop/zram-dinit/releases/download/v1.1/zram-dinit-1.1.tar.gz
 	md5sums = SKIP
 	md5sums = SKIP
 	md5sums = SKIP

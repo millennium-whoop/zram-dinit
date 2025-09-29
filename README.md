@@ -1,6 +1,17 @@
 # zram-dinit
 
-A simple Dinit service to enable ZRAM swap on Artix Linux.
+A simple Dinit service to enable ZRAM swap.
+
+## Why Use zram?
+
+zram creates a compressed block of memory that acts like swap or a temporary drive. Instead of writing less-used data to your slower SSD or hard drive, the system compresses it and keeps it in RAM. This gives you more effective memory, keeps things faster, and reduces disk wear.
+
+### When to Use It:
+
+- Systems with 2–8 GB RAM – Helps keep your system responsive under load by compressing memory instead of using slow disk swap
+- SSD-based systems – Reduces swap-related disk writes, helping to extend the lifespan of your SSD
+- Systems without a swap partition – Easy way to add swap-like functionality without touching your disk
+- Embedded devices and containers – Saves memory and improves performance in resource-constrained environments
 
 ## Features
 
@@ -38,9 +49,9 @@ Disable it at boot:
 
 Check ZRAM devices and usage:
 
-    sudo zramctl
-
-You should see your `/dev/zram0` (or `/dev/zram1`) listed as `[SWAP]`.
+    swapon --show
+    cat /sys/block/zram0/comp_algorithm
+    cat /sys/block/zram0/disksize
 
 ## Configuration
 

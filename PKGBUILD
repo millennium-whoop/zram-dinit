@@ -1,11 +1,11 @@
 # Maintainer: aetherway <aertherway@disroot.org>
 pkgname=zram-dinit
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
-pkgdesc="Dinit service for setting up zram swap without zramen"
+pkgdesc="Dinit service for setting up zram swap"
 arch=('any')
 license=('MIT')
-depends=('dinit' 'util-linux')
+depends=('dinit')
 backup=('etc/dinit.d/config/zram.conf')
 source=("https://github.com/millennium-whoop/zram-dinit/releases/download/v${pkgver}/zram-dinit-${pkgver}.tar.gz")
 md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
